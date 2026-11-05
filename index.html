@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./main.css" />
+        <title>Textora</title>
+    </head>
+    <body>
+        <div id="page">
+            <!-- Nav Area -->
+            <nav>
+                <h1>Textora</h1>
+                <div id="darkmode">Dark Mode</div>
+            </nav>
+
+            <!-- Text Area -->
+            <div id="textarea">
+                <textarea placeholder="Start Typing Something..."></textarea>
+            </div>
+
+            <!-- Results Area -->
+            <div id="resultsarea">
+                <button class="resultsarea"><span>0</span>Words</button>
+                <button class="resultsarea"><span>0</span>Characters</button>
+                <button class="resultsarea"><span>0</span>Reading Time</button>
+                <button class="resultsarea"><span>0</span>Characters</button>
+            </div>
+
+            <!-- Function Area -->
+            <div id="functionarea">
+                <button class="function">
+                    <span class="icon">
+                        <img src="./icons/uppercase.png" alt="Uppercase" />
+                    </span>
+                    <span>Uppercase</span>
+                </button>
+                <button class="function">
+                    <span class="icon">
+                        <img src="./icons/lowercase.png" alt="Lowercase" />
+                    </span>
+                    <span>Lowercase</span>
+                </button>
+                <button class="function">
+                    <span class="icon">
+                        <img src="./icons/uppercase.png" alt="Capitalize" />
+                    </span>
+                    <span>Capitalize</span>
+                </button>
+                <button class="function">
+                    <span class="icon">
+                        <img src="./icons/copy.png" alt="Copy" />
+                    </span>
+                    <span>Copy</span>
+                </button>
+                <button class="function">
+                    <span class="icon">
+                        <img src="./icons/downloading.png" alt="Download" />
+                    </span>
+                    <span>Download as TXT</span>
+                </button>
+                <button class="function" id="clear">
+                    <span class="icon">
+                        <img src="./icons/clear.png" alt="Clear" />
+                    </span>
+                    <span>Clear</span>
+                </button>
+            </div>
+        </div>
+    </body>
+    <script src="./script.js"></script>
+</html>
