@@ -61,31 +61,49 @@ function all() {
 }
 
 // Function Area:
-// Uppercase:
+
+// Uppercase Function:
 document.getElementById("uppercase").addEventListener("click", function () {
     document.querySelector("textarea").value = textArea.value.toUpperCase();
 });
 
-// Lowercase:
+// Lowercase Function:
 document.getElementById("lowercase").addEventListener("click", function () {
     document.querySelector("textarea").value = textArea.value.toLowerCase();
 });
 
-// Capitalize:
+// Capitalize Function:
 document.getElementById("capitalize").addEventListener("click", function () {
     document.querySelector("textarea").value = textArea.value
     .toLowerCase()
     .replace(/\b\w/g, (char) => char.toUpperCase());
 });
 
-// Copy:
+// Copy Function:
 document.getElementById("copy").addEventListener("click", function () {
     navigator.clipboard.writeText(textArea.value);
 });
 
-// Downlod As Txt:
+// Downlod As Txt Function:
+document.getElementById("download").addEventListener("click", function () {
+    const blob = new Blob([textArea.value], {type: "text/plain"});
 
-// Clear:
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Textora.txt";
+
+    link.click();
+
+    URL.revokeObjectURL(url);
+});
+
+// Clear Function:
 document.getElementById("clear").addEventListener("click", function () {
     textArea.value = "";
+    document.getElementById("characters-no-space").innerHTML = 0;
+    document.getElementById("reading-time").innerHTML = 0;
+    document.getElementById("characters").innerHTML = 0;
+    document.getElementById("words").innerHTML = 0;
 });
